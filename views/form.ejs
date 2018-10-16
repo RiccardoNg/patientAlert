@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		
+		<h1>THIS IS REQUEST FORM</h1>
+		
+
+		
+		<form id="request-form" method="POST" action="/evaluateInput">
+			<label for="sot">Sot</label>
+			<!-- <input type="text" name="sot" value="<%= qs.sot ? qs.sot : 1 %>"> -->
+			<label class="radio-inline"><input type="radio" name="sot" value="1">37-38oC </label>
+			<label class="radio-inline"><input type="radio" name="sot" value="2">38>40oC</label>
+			<label class="radio-inline"><input type="radio" name="sot" value="3">>40oC</label><br>
+
+			<label for="metmoi">Met moi</label>
+			<!-- <input type="text" name="metmoi" value="<%= qs.metmoi ? qs.metmoi : 100 %>"> -->
+			<label class="radio-inline"><input type="radio" name="metmoi" value="1">Co the hoat dong binh thuong voi mot chut co gang </label>
+			<label class="radio-inline"><input type="radio" name="metmoi" value="2">Tren giuong it hon nua ngay</label>
+			<label class="radio-inline"><input type="radio" name="metmoi" value="3">Tren giuong nhieu hon nua ngay</label><br>
+
+
+			<label for="buonnon">Buon non</label>
+			<!-- <input type="text" name="buonnon" value="<%= qs.buonnon ? qs.buonnon : 1 %>"> -->
+			<label class="radio-inline"><input type="radio" name="buonnon" value="1">Co the an </label>
+			<label class="radio-inline"><input type="radio" name="buonnon" value="2">An hoac uong it hon binh thuong</label>
+			<label class="radio-inline"><input type="radio" name="buonnon" value="3">Khong the an hoac uong</label><br>
+
+
+			<label for="nonmua">Non mua</label>
+			<!-- <input type="text" name="nonmua" value="<%= qs.nonmua ? qs.nonmua : 1 %>"> -->
+			<label class="radio-inline"><input type="radio" name="nonmua" value="1">Non 1 lan 1 ngay </label>
+			<label class="radio-inline"><input type="radio" name="nonmua" value="2">Non 2-5 lan 1 ngay</label>
+			<label class="radio-inline"><input type="radio" name="nonmua" value="3">Non >= 6 lan 1 ngay</label><br>
+
+
+			<label for="miengdau">Mieng dau</label>
+			<!-- <input type="text" name="miengdau" value="<%= qs.miengdau ? qs.miengdau : 1 %>"> -->
+			<label class="radio-inline"><input type="radio" name="miengdau" value="1">Dau nhuc hoac co vet loet nhung khong dau</label>
+			<label class="radio-inline"><input type="radio" name="miengdau" value="2">Dau nhuc do vet loet nhung van co the an</label>
+			<label class="radio-inline"><input type="radio" name="miengdau" value="3">Dau nhuc do vet loet va khong the an</label><br>
+			
+			<label for="tieuchay">Tieu chay</label>
+			<!-- <input type="text" name="tieuchay" value="<%= qs.tieuchay ? qs.tieuchay : 1 %>"> -->
+			<label class="radio-inline"><input type="radio" name="tieuchay" value="1">Phan nhao</label>
+			<label class="radio-inline"><input type="radio" name="tieuchay" value="2">Phan long, nhieu hon binh thuong</label>
+			<label class="radio-inline"><input type="radio" name="tieuchay" value="3">Di lien tuc hoac co mau, chong mat</label><br>
+
+			<label for="taobon">Tao bon</label>
+			<!-- <input type="text" name="taobon" value="<%= qs.taobon ? qs.taobon : 1 %>"> -->
+			<label class="radio-inline"><input type="radio" name="taobon" value="1">Khong dai tien trong 2 ngay</label>
+			<label class="radio-inline"><input type="radio" name="taobon" value="2">Khong dai tien trong 3-4 ngay</label>
+			<label class="radio-inline"><input type="radio" name="taobon" value="3">Di lien tuc hoac co mau, chong mat</label><br>
+
+			<label for="anmatngon">An mat ngon</label>
+			<!-- <input type="text" name="anmatngon" value="<%= qs.anmatngon ? qs.anmatngon : 18 %>"> -->
+			<label class="radio-inline"><input type="radio" name="anmatngon" value="1">Chan an</label>
+			<label class="radio-inline"><input type="radio" name="anmatngon" value="2">thuong ko cam thay doi</label>
+			<label class="radio-inline"><input type="radio" name="anmatngon" value="3">Khong co cam giac ngon khi an bat ky thu gi/khong the an</label><br>
+
+			
+
+
+			<br>
+			<br>
+			<input type="submit" value="submit"/>
+			<br>
+			<input type="button" onclick="yourJsFunction();" value="submit without refresh"/>
+			<br>
+			<label for="result">RESULT</label>
+			<p id='demo'></p><br>
+			
+			
+			</form>
+
+			<script>
+			var a = 1+2;
+			var p1 = 5;
+			var p2 = 7;
+
+			document.addEventListener("click", function() {
+			    myFunction(p1, p2);
+			});
+
+			function myFunction(a, b) {
+			    var result = a * b;
+			    document.getElementById("demo").innerHTML = result;
+			}
+
+			$('request-form').submit(function(ev) {
+			    ev.preventDefault(); // to stop the form from submitting
+			    /* Validations go here */
+			    this.submit(); // If all the validations succeeded
+			});
+			</script>
+		</form>
+		
+ 
+<h2>JSON</h2>
+<pre id="result"></pre>
+
+
+		
+	</body>
+</html>
+

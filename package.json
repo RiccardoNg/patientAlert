@@ -1,0 +1,19 @@
+{
+  "name": "WordCloudAPI",
+  "version": "0.4.0",
+  "description": "",
+  "main": "evaluate.js",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.0",
+    "formidable": "^1.1.1",
+    "multer": "^1.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ri Ng",
+  "license": "MIT"
+}
